@@ -1,0 +1,53 @@
+
+Showing logs for build [32mmeta-jstrachan-nodey452-pr-2-pr-2wfth-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-dp9vn[0m
+{"level":"info","ts":1589904265.9174664,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1589904265.9181986,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-jstrachan-nodey452-pr-2-pr-2wfth-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-krmbk[0m
+{"level":"info","ts":1589904267.2173,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1589904267.2186875,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmeta-jstrachan-nodey452-pr-2-pr-2wfth-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-jstrachan-nodey452-pr-2-pr-2wfth-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-jstrachan-nodey452-pr-2-pr-2wfth-wvdrr[0m
+{"level":"info","ts":1589904275.3011541,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1589904276.0455666,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jstrachan/nodey452.git @ bde2f9450df9823c58c10e159df99e715c9661e2 in path /workspace/source"}
+
+Showing logs for build [32mmeta-jstrachan-nodey452-pr-2-pr-2wfth-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:bde2f9450df9823c58c10e159df99e715c9661e2,2:ea82231f04915dfa98878374c79dbd845ea59f6b
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow ea82231f04915dfa98878374c79dbd845ea59f6b: bde2f9450df9823c58c10e159df99e715c9661e2:
+DEBUG: ran git fetch --unshallow origin ea82231f04915dfa98878374c79dbd845ea59f6b: bde2f9450df9823c58c10e159df99e715c9661e2: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard bde2f9450df9823c58c10e159df99e715c9661e2
+DEBUG: ran git reset --hard bde2f9450df9823c58c10e159df99e715c9661e2 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge ea82231f04915dfa98878374c79dbd845ea59f6b
+DEBUG: ran git merge ea82231f04915dfa98878374c79dbd845ea59f6b in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e bde2f9450df9823c58c10e159df99e715c9661e2..HEAD
+Merged SHA ea82231f04915dfa98878374c79dbd845ea59f6b with commit message 'Update index.html' into base branch master
+
+Showing logs for build [32mmeta-jstrachan-nodey452-pr-2-pr-2wfth-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow ea82231f04915dfa98878374c79dbd845ea59f6b: bde2f9450df9823c58c10e159df99e715c9661e2:
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin ea82231f04915dfa98878374c79dbd845ea59f6b: bde2f9450df9823c58c10e159df99e715c9661e2:
+DEBUG: ran git fetch origin ea82231f04915dfa98878374c79dbd845ea59f6b: bde2f9450df9823c58c10e159df99e715c9661e2: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git rev-parse --is-shallow-repository
+DEBUG: Unshallowed git repo in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard bde2f9450df9823c58c10e159df99e715c9661e2
+DEBUG: ran git reset --hard bde2f9450df9823c58c10e159df99e715c9661e2 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge ea82231f04915dfa98878374c79dbd845ea59f6b
+DEBUG: ran git merge ea82231f04915dfa98878374c79dbd845ea59f6b in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e bde2f9450df9823c58c10e159df99e715c9661e2..HEAD
+Merged SHA ea82231f04915dfa98878374c79dbd845ea59f6b with commit message 'Update index.html' into base branch master
+
+Showing logs for build [32mmeta-jstrachan-nodey452-pr-2-pr-2wfth-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+error: no build pack for tekton exists at directory /home/.**/draft/packs/github.com/jenkins-x/**r-packs-kubernetes/packs/tekton
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
