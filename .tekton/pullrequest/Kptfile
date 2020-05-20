@@ -5,7 +5,7 @@ metadata:
 upstream:
     type: git
     git:
-        commit: 2344e42320111701a5b8dbfeca5f8cf997afe712
+        commit: d590f1d29501bf4ebc03d16ce1240ff79b7a62b3
         repo: https://github.com/jstrachan/jxr-pipeline-catalog
         directory: /javascript/pullrequest
         ref: master

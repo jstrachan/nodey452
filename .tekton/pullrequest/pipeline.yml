@@ -8,7 +8,7 @@ metadata:
     jenkins.io/pipelineType: build
     owner: myowner
     repository: myrepo
-  name: myowner-myrepo-master-flpbv-1
+  name: myowner-myrepo-master-6r8cd-1
   namespace: jx
 spec:
   params:
@@ -29,5 +29,5 @@ spec:
       value: $(params.version)
     resources: {}
     taskRef:
-      name: myowner-myrepo-master-flpbv-from-build-pack-1
+      name: myowner-myrepo-master-6r8cd-from-build-pack-1
 status: {}

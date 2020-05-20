@@ -8,7 +8,7 @@ metadata:
     jenkins.io/pipelineType: build
     owner: myowner
     repository: myrepo
-  name: myowner-myrepo-master-flpbv-1
+  name: myowner-myrepo-master-6r8cd-1
 spec:
   params:
   - name: version
@@ -17,7 +17,7 @@ spec:
     value: 0.0.1
   pipelineRef:
     apiVersion: tekton.dev/v1alpha1
-    name: myowner-myrepo-master-flpbv-1
+    name: myowner-myrepo-master-6r8cd-1
   podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 240h0m0s
