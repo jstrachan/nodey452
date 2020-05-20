@@ -216,6 +216,13 @@ spec:
       readOnly: true
     workingDir: /workspace/source
   - args:
+    - echo Hello World
+    command:
+    - /bin/sh
+    - -c
+    image: gcr.io/jenkinsxio/builder-nodejs:2.1.35-665
+    name: pre-build-step
+  - args:
     - npm install
     command:
     - /bin/sh
@@ -325,6 +332,13 @@ spec:
       name: podinfo
       readOnly: true
     workingDir: /workspace/source
+  - args:
+    - echo Goodbye World
+    command:
+    - /bin/sh
+    - -c
+    image: gcr.io/jenkinsxio/builder-nodejs:2.1.35-665
+    name: post-build-step
   - args:
     - /kaniko/executor --cache=true --cache-dir=/workspace --context=/workspace/source
       --dockerfile=/workspace/source/Dockerfile --destination=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION
