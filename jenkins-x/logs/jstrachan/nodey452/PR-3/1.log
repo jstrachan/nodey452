@@ -1,33 +1,20 @@
 
-Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-kvtlk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-4rvkg[0m
-{"level":"info","ts":1589948062.8364265,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1589948062.83694,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-q9dcr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-4k4cn[0m
+{"level":"info","ts":1589948534.790645,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1589948534.7911823,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-kvtlk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-fngxv[0m
-{"level":"info","ts":1589948063.7780812,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1589948063.7794213,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-q9dcr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-vhnbt[0m
+{"level":"info","ts":1589948535.801189,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1589948535.8023775,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-kvtlk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-q9dcr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-kvtlk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-nodey452-pr-3-pr-buil-kvtlk-xqkx6[0m
-{"level":"info","ts":1589948067.8951352,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1589948068.6460226,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jstrachan/nodey452.git @ master in path /workspace/source"}
+Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-q9dcr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-nodey452-pr-3-pr-buil-q9dcr-bg9lp[0m
+{"level":"info","ts":1589948539.880311,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1589948540.5723484,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jstrachan/nodey452.git @ master in path /workspace/source"}
 
-Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-kvtlk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:bde2f9450df9823c58c10e159df99e715c9661e2,3:e8a5928412a24b668a0a473b380cedbf94128aee
-DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow e8a5928412a24b668a0a473b380cedbf94128aee: bde2f9450df9823c58c10e159df99e715c9661e2:
-DEBUG: ran git fetch --unshallow origin e8a5928412a24b668a0a473b380cedbf94128aee: bde2f9450df9823c58c10e159df99e715c9661e2: in 
-DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
-DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
-DEBUG: ran git checkout master in 
-DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard bde2f9450df9823c58c10e159df99e715c9661e2
-DEBUG: ran git reset --hard bde2f9450df9823c58c10e159df99e715c9661e2 in 
-DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
-DEBUG: ran clean --force -d . in 
-DEBUG: JX_LOG_LEVEL=error LC_ALL=C git merge e8a5928412a24b668a0a473b380cedbf94128aee
-DEBUG: ran git merge e8a5928412a24b668a0a473b380cedbf94128aee in 
-DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e bde2f9450df9823c58c10e159df99e715c9661e2..HEAD
-Merged SHA e8a5928412a24b668a0a473b380cedbf94128aee with commit message 'Update index.html' into base branch master
+Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-q9dcr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-kvtlk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-step2[0m
+Showing logs for build [32mjstrachan-nodey452-pr-3-pr-buil-q9dcr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-step2[0m
 hello tekton
