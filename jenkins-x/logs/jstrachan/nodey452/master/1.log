@@ -1,0 +1,97 @@
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-brbv6[0m
+{"level":"info","ts":1590130945.1914499,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590130945.192055,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-vt465[0m
+{"level":"info","ts":1590130946.4904706,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590130946.4918656,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-git-clone[0m
+Cloning into 'source'...
+cloned url: https://github.com/jstrachan/nodey452.git to dir: source
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+checked out revision: master to dir: source
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-next-version[0m
+created new version: 1.0.17 and written to file: ./VERSION
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-tag-version[0m
+Updating chart version in charts/nodey452/Chart.yaml to 1.0.17
+Updating repository in charts/nodey452/values.yaml to gcr.io/jstrachan-multicluster/nodey452
+Updating tag in charts/nodey452/values.yaml to 1.0.17
+Tag v1.0.17 created and pushed to remote origin
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.17 No repository field.
+npm WARN REPLACE_ME@1.0.17 No license field.
+
+up to date in 0.353s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.17 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+ERROR: logging before flag.Parse: E0522 07:02:48.718968      11 metadata.go:241] Failed to unmarshal scopes: json: cannot unmarshal string into Go value of type []string
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Retrieving image manifest node:9-slim        
+ERROR: logging before flag.Parse: E0522 07:02:49.037778      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0522 07:02:49.040867      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Checking for cached layer gcr.io/jstrachan-multicluster/cache:fe578b06efd2a06da7b1a77eb621ab408bef78ae7626c6f2a8522776faa1c941... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0010] Taking snapshot of full filesystem...        
+[36mINFO[0m[0011] Resolving paths                              
+[36mINFO[0m[0013] ENV PORT 8080                                
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] EXPOSE 8080                                  
+[36mINFO[0m[0013] cmd: EXPOSE                                  
+[36mINFO[0m[0013] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] WORKDIR /usr/src/app                         
+[36mINFO[0m[0013] cmd: workdir                                 
+[36mINFO[0m[0013] Changed working directory to /usr/src/app    
+[36mINFO[0m[0013] Creating directory /usr/src/app              
+[36mINFO[0m[0013] Resolving paths                              
+[36mINFO[0m[0013] Taking snapshot of files...                  
+[36mINFO[0m[0013] COPY . .                                     
+[36mINFO[0m[0013] Resolving paths                              
+[36mINFO[0m[0013] Taking snapshot of files...                  
+[36mINFO[0m[0013] CMD ["npm", "start"]                         
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] Pushing layer gcr.io/jstrachan-multicluster/cache:fe578b06efd2a06da7b1a77eb621ab408bef78ae7626c6f2a8522776faa1c941 to cache now 
+
+Showing logs for build [32mn-nodey452-master-release-rnfhb[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Generating change log from git ref 86743a3e832438e0739ad656f20aabed08b18fff => 14a40d9b16d2cb736c8df3b25a43321e0a5c7fac
+error: Validation failures in YAML file /workspace/source/jenkins-x.yml:
+(root): Additional property pipelineTriggerPlugin is not allowed
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-changelog'. The execution of the pipeline has stopped.[0m
