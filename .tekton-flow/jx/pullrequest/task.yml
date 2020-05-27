@@ -9,7 +9,7 @@ metadata:
     jenkins.io/task-stage-name: from-build-pack
     owner: myowner
     repository: myrepo
-  name: myowner-myrepo-master-6r8cd-from-build-pack-1
+  name: myowner-myrepo-master-96znj-from-build-pack-1
   namespace: jx
 spec:
   inputs:
@@ -222,13 +222,6 @@ spec:
       readOnly: true
     workingDir: /workspace/source
   - args:
-    - echo Hello World
-    command:
-    - /bin/sh
-    - -c
-    image: gcr.io/jenkinsxio/builder-nodejs:2.1.35-665
-    name: pre-build-step
-  - args:
     - npm install
     command:
     - /bin/sh
@@ -339,13 +332,6 @@ spec:
       readOnly: true
     workingDir: /workspace/source
   - args:
-    - echo Goodbye World
-    command:
-    - /bin/sh
-    - -c
-    image: gcr.io/jenkinsxio/builder-nodejs:2.1.35-665
-    name: post-build-step
-  - args:
     - /kaniko/executor --cache=true --cache-dir=/workspace --context=/workspace/source
       --dockerfile=/workspace/source/Dockerfile --destination=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION
       --cache-repo=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/cache
@@ -442,7 +428,7 @@ spec:
       value: $(inputs.params.version)
     - name: PREVIEW_VERSION
       value: $(inputs.params.version)
-    image: gcr.io/jenkinsxio-labs-private/jxl:0.0.135
+    image: gcr.io/jenkinsxio-labs-private/jxl:0.0.141
     name: promote-make-preview
     resources:
       requests:
@@ -497,7 +483,7 @@ spec:
       value: $(inputs.params.version)
     - name: PREVIEW_VERSION
       value: $(inputs.params.version)
-    image: gcr.io/jenkinsxio-labs-private/jxl:0.0.135
+    image: gcr.io/jenkinsxio-labs-private/jxl:0.0.141
     name: promote-jx-preview
     resources:
       requests:

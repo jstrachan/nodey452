@@ -1,0 +1,16 @@
+apiVersion: flow.tekton.dev/v1alpha1
+kind: Flow
+metadata:
+  name: jx-flow
+spec:
+  when:
+  - push:
+      branches:
+      - master
+    trigger:
+      resources:
+      - release/*.yml
+  - pullRequest: {}
+    trigger:
+      resources:
+      - pullrequest/*.yml

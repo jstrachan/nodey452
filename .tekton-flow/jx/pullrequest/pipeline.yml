@@ -8,10 +8,15 @@ metadata:
     jenkins.io/pipelineType: build
     owner: myowner
     repository: myrepo
-  name: myowner-myrepo-master-rtwhn-1
+  name: myowner-myrepo-master-96znj-1
   namespace: jx
 spec:
   params:
+  - default: 0.0.1
+    description: the version number for this pipeline which is used as a tag on docker
+      images and helm charts
+    name: version
+    type: string
   - default: 0.0.1
     description: the version number for this pipeline which is used as a tag on docker
       images and helm charts
@@ -24,5 +29,5 @@ spec:
       value: $(params.version)
     resources: {}
     taskRef:
-      name: myowner-myrepo-master-rtwhn-from-build-pack-1
+      name: myowner-myrepo-master-96znj-from-build-pack-1
 status: {}
